@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game() : m_gameWindow("Test Game", sf::Vector2u(800, 600))
+Game::Game() : m_gameWindow("Test Game", sf::Vector2u(800, 600)), snake(16)
 {
 }
 
@@ -27,6 +27,7 @@ void Game::Render()
 {
     m_gameWindow.BeginDraw();
     // m_gameWindow.Draw(sf::RectangleShape({100,100}));
+    snake.Render(*m_gameWindow.GetRenderWindow());
     m_gameWindow.EndDraw();
 }
 
