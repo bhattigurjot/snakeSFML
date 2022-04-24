@@ -18,6 +18,7 @@ GameWindow::~GameWindow()
 // Getters
 bool GameWindow::IsRunning() const { return m_isRunning; }
 sf::Vector2u GameWindow::GetWindowSize() const { return m_windowSize; }
+sf::RenderWindow* GameWindow::GetRenderWindow() { return &m_window; }
 
 // Public Functions
 void GameWindow::BeginDraw() 
