@@ -9,7 +9,8 @@ Game::~Game()
 }
 
 // Getters
-bool Game::IsGameRunning() { return m_gameWindow.IsRunning(); }
+bool Game::IsGameRunning() const { return m_gameWindow.IsRunning(); }
+sf::Time Game::GetElapsedTime() const { return m_elapsedTime; }
 
 // Public Functions
 void Game::HandleInput()
@@ -25,6 +26,11 @@ void Game::Update()
 void Game::Render()
 {
     m_gameWindow.BeginDraw();
-    m_gameWindow.Draw(sf::RectangleShape({100,100}));
+    // m_gameWindow.Draw(sf::RectangleShape({100,100}));
     m_gameWindow.EndDraw();
+}
+
+void Game::RestartClock()
+{
+    m_elapsedTime = m_clock.restart();
 }

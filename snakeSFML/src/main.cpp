@@ -9,6 +9,7 @@ int main()
         game.HandleInput();
         game.Update();
         game.Render();
+        game.RestartClock();
     }
     // std::cout << "Press ENTER to continue.." << std::endl;
     // std::cin.ignore();
