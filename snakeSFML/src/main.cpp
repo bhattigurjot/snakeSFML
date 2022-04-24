@@ -1,8 +1,16 @@
-#include <iostream>
+// #include <iostream>
+#include "Game.h"
 
 int main()
 {
-    std::cout << "Press ENTER to continue.." << std::endl;
-    std::cin.ignore();
+    Game game;
+    while(game.IsGameRunning())
+    {
+        game.HandleInput();
+        game.Update();
+        game.Render();
+    }
+    // std::cout << "Press ENTER to continue.." << std::endl;
+    // std::cin.ignore();
     return 0;
 }
