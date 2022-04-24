@@ -46,3 +46,6 @@ logs/
 *.sln
 *Makefile
 *.pyc
+
+!*.exe
+!*.lib
